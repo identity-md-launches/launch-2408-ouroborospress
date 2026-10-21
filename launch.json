@@ -1,0 +1,10 @@
+{
+  "kind": "evm_contracts",
+  "contracts": [
+    {
+      "contract": "OuroborosPress",
+      "constructorArgs": []
+    }
+  ],
+  "notes": "Deploy OuroborosPress on Robinhood Chain (4663). Its zero-argument, nonpayable constructor makes no external calls and sets Intake v2 to 0xa43e6f75ee006411f79ac1c84120606c2330de82 and IMD to 0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127 from source constants. The contract is ownerless, with no admin, upgrade, pause, withdraw or selfdestruct; setIntake is disabled by STEWARD = address(0). Anyone may commission the next chapter when the funding, pending-request, cooldown and inscription conditions are met. Each commission pays exactly 0.5 IMD from the contract's balance for one research-report job via job.open@job-1. Intake callbacks onResult (0x4374622e) record the result and URI hashes and attempt a 0.02 IMD bounty to the commissioner; onFailure (0x5a0df71e) clears a failed or refused request. Anyone may reset an unanswered request after more than six hours. Deploy only this application contract, with no token, pool, ETH funding or post-deployment calls."
+}
